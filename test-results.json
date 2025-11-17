@@ -1,0 +1,195 @@
+{
+  "projectName": "ProyectoEduData",
+  "testExecutionDate": "2024-12-19",
+  "testVersion": "1.0",
+  "overallStatus": "PASSED",
+  "summary": {
+    "totalTests": 48,
+    "passedTests": 48,
+    "failedTests": 0,
+    "successRate": "100%",
+    "totalExecutionTime": "5.648s",
+    "testSuites": 5
+  },
+  "requirementsCoverage": [
+    {
+      "id": "RF-01",
+      "title": "Mapa Interactivo",
+      "description": "Cargar regiones con tooltips",
+      "status": "PASSED",
+      "testsCount": 3,
+      "validations": [
+        "Carga de 32 regiones",
+        "Coordenadas geográficas",
+        "Tooltips con nombres"
+      ]
+    },
+    {
+      "id": "RF-02",
+      "title": "Indicadores por Región",
+      "description": "Filtrar indicadores y renderizar gráficos",
+      "status": "PASSED",
+      "testsCount": 2,
+      "validations": [
+        "Filtro por región",
+        "Filtro por año"
+      ]
+    },
+    {
+      "id": "RF-03",
+      "title": "Comparación y Alertas",
+      "description": "Detectar brechas entre regiones",
+      "status": "PASSED",
+      "testsCount": 4,
+      "validations": [
+        "Ordenamiento de regiones",
+        "Detección de brechas >20%",
+        "Clasificación de severidad",
+        "Alertas informativas"
+      ]
+    },
+    {
+      "id": "RF-04",
+      "title": "Generación de Reportes",
+      "description": "Reportes en múltiples formatos",
+      "status": "PASSED",
+      "testsCount": 6,
+      "validations": [
+        "Generación PDF",
+        "Validación de formatos",
+        "Paginación correcta"
+      ]
+    },
+    {
+      "id": "RF-05",
+      "title": "Exportación de Archivos",
+      "description": "Exportar en formatos soportados",
+      "status": "PASSED",
+      "testsCount": 8,
+      "validations": [
+        "Exportación CSV",
+        "Exportación JSON",
+        "Exportación PDF",
+        "Escapado de caracteres"
+      ]
+    },
+    {
+      "id": "RF-06",
+      "title": "APIs Externas",
+      "description": "Conexiones a MEN y DANE",
+      "status": "PASSED",
+      "testsCount": 10,
+      "validations": [
+        "Conexión a API MEN",
+        "Conexión a API DANE",
+        "Validación de estructura",
+        "Normalización de datos"
+      ]
+    },
+    {
+      "id": "RF-07",
+      "title": "Actualización ETL",
+      "description": "Procesos automáticos de ETL",
+      "status": "PASSED",
+      "testsCount": 4,
+      "validations": [
+        "Ejecución exitosa",
+        "Registro de logs",
+        "Historial de ejecuciones",
+        "Manejo de errores"
+      ]
+    },
+    {
+      "id": "RF-08",
+      "title": "Tendencias Históricas",
+      "description": "Evolución histórica 2018-2024",
+      "status": "PASSED",
+      "testsCount": 2,
+      "validations": [
+        "7 años de datos",
+        "Orden cronológico",
+        "Tendencia de crecimiento"
+      ]
+    },
+    {
+      "id": "RF-09",
+      "title": "Filtros Avanzados",
+      "description": "Múltiples filtros simultáneos",
+      "status": "PASSED",
+      "testsCount": 4,
+      "validations": [
+        "Filtro por región",
+        "Filtro por año",
+        "Filtro por indicador",
+        "Múltiples filtros"
+      ]
+    },
+    {
+      "id": "RF-10",
+      "title": "Alertas de Brechas",
+      "description": "Detectar brechas >20%",
+      "status": "PASSED",
+      "testsCount": 3,
+      "validations": [
+        "Detección de brechas",
+        "Clasificación de severidad",
+        "Sin falsos positivos"
+      ]
+    }
+  ],
+  "testSuites": [
+    {
+      "name": "FiltersAndAlerts.test.js",
+      "path": "__tests__/unit/FiltersAndAlerts.test.js",
+      "status": "PASSED",
+      "tests": 7,
+      "executionTime": "35ms",
+      "coverage": ["RF-09", "RF-10"]
+    },
+    {
+      "name": "ExternalAPI.test.js",
+      "path": "__tests__/unit/ExternalAPI.test.js",
+      "status": "PASSED",
+      "tests": 10,
+      "executionTime": "40ms",
+      "coverage": ["RF-06"]
+    },
+    {
+      "name": "IndicatorController.test.js",
+      "path": "__tests__/unit/IndicatorController.test.js",
+      "status": "PASSED",
+      "tests": 7,
+      "executionTime": "24ms",
+      "coverage": ["RF-01", "RF-02", "RF-08"]
+    },
+    {
+      "name": "ComparisonAndETL.test.js",
+      "path": "__tests__/unit/ComparisonAndETL.test.js",
+      "status": "PASSED",
+      "tests": 8,
+      "executionTime": "49ms",
+      "coverage": ["RF-03", "RF-07"]
+    },
+    {
+      "name": "ReportService.test.js",
+      "path": "__tests__/unit/ReportService.test.js",
+      "status": "PASSED",
+      "tests": 16,
+      "executionTime": "48ms",
+      "coverage": ["RF-04", "RF-05"]
+    }
+  ],
+  "environment": {
+    "testFramework": "Jest v29.7.0",
+    "nodeVersion": "v22.14.0",
+    "environment": "Node.js",
+    "platform": "Windows PowerShell"
+  },
+  "recommendation": "APROBADO - LISTO PARA DESPLIEGUE",
+  "nextSteps": [
+    "Ejecutar pruebas de integración",
+    "Ejecutar pruebas E2E",
+    "Despliegue en ambiente de staging",
+    "Pruebas de carga y rendimiento"
+  ]
+}
